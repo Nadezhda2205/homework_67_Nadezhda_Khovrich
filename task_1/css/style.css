@@ -1,0 +1,39 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.fixed_overlay__modal {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.fixed_overlay__modal::after {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+    content: '';
+}
+
+.modal {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.modal_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    white-space: normal;
+    background-color: rgba(237, 53, 105, 0.447);    
+    color: rgb(3, 12, 12);
+}
+
+.button_css{
+    align-items: center;
+}
