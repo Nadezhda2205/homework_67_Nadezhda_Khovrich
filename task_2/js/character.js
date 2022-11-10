@@ -1,9 +1,6 @@
-
-
 let urlParams = new URLSearchParams(window.location.search);
 
 let param = urlParams.get('id');
-
 
 fetch('https://www.breakingbadapi.com/api/characters')
     .then((response) => {
@@ -15,7 +12,6 @@ fetch('https://www.breakingbadapi.com/api/characters')
             if (item.char_id == param){
                 var character = item
                 break
-
             }
         };
         console.log(character)
@@ -61,15 +57,10 @@ fetch('https://www.breakingbadapi.com/api/characters')
         else{
             dateBirthday.innerText = 'Не указан'
         }
-        
         cardBody.appendChild(dateBirthday)
 
         nickname = document.createElement('p')
         nickname.classList = 'card-text'
         nickname.innerText = 'nickname ' + character.nickname
         cardBody.appendChild(nickname)
-
-       
-
     })
-

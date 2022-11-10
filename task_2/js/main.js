@@ -1,5 +1,3 @@
-
-
 fetch('https://www.breakingbadapi.com/api/characters')
     .then((response) => {
         return response.json();
@@ -40,6 +38,5 @@ fetch('https://www.breakingbadapi.com/api/characters')
             cardTitle.classList.add('card-title')
             cardTitle.innerText = item.name
             cardBody.appendChild(cardTitle)
-
         }
     });
