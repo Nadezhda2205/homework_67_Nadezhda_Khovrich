@@ -48,11 +48,10 @@ fetch('https://www.breakingbadapi.com/api/characters')
         if (character.birthday != 'Unknown'){
             date = new Date();
             year = date.getFullYear();
-            console.log(year)
             birthday = character.birthday.slice(6, 10)
             age = year - birthday
 
-            dateBirthday.innerText = age
+            dateBirthday.innerText = age  + ' years'
         }
         else{
             dateBirthday.innerText = 'Не указан'
@@ -61,6 +60,12 @@ fetch('https://www.breakingbadapi.com/api/characters')
 
         nickname = document.createElement('p')
         nickname.classList = 'card-text'
-        nickname.innerText = 'nickname ' + character.nickname
+        nickname.innerText = 'Nickname - ' + character.nickname
         cardBody.appendChild(nickname)
+
+        statusСharacter = document.createElement('p')
+        statusСharacter.classList = 'card-text'
+        statusСharacter.innerText = 'Status - ' + character.status
+        cardBody.appendChild(statusСharacter)
+
     })
